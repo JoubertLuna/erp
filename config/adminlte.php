@@ -291,6 +291,10 @@ return [
 
     'menu' => [
         [
+            'header' => 'Cadastros',
+            'can'    => 'cadastro.geral',
+        ],
+        [
             'text'    => 'Cadastros',
             'icon'    => 'fas fa-building',
             'can'    => 'cadastro.geral',
@@ -307,12 +311,23 @@ return [
                     'icon'    => 'fab fa-unity',
                     'can'    => 'unidade.index',
                 ],
+                [
+                    'text' => 'Produto',
+                    'route'  => 'produto.index',
+                    'icon'    => 'fas fa-store-alt',
+                    'can'    => 'produto.index',
+                ],
+                [
+                    'text' => 'Contato',
+                    'route'  => 'contato.index',
+                    'icon'    => 'fas fa-id-card-alt',
+                    'can'    => 'contato.index',
+                ],
             ],
-
-            [
-                'header' => 'Perfil / Permissão',
-                'can'    => 'config.geral',
-            ],
+        ],
+        [
+            'header' => 'Perfil / Permissão',
+            'can'    => 'config.geral',
         ],
         [
             'text'    => 'Configurações de Acesso',

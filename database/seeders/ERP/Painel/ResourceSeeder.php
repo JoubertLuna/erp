@@ -184,5 +184,79 @@ class ResourceSeeder extends Seeder
             'resource' => 'unidade.destroy',
         ]);
         //Unidade
+
+        //Produto
+        Resource::create([
+            'nome' => 'Produto Index',
+            'resource' => 'produto.index',
+        ]);
+
+        Resource::create([
+            'nome' => ' Produto Create',
+            'resource' => 'produto.create',
+        ]);
+
+        Resource::create([
+            'nome' => 'Produto Store',
+            'resource' => 'produto.store',
+        ]);
+
+        Resource::create([
+            'nome' => 'Produto Show',
+            'resource' => 'produto.show',
+        ]);
+
+        Resource::create([
+            'nome' => 'Produto Edit',
+            'resource' => 'produto.edit',
+        ]);
+
+        Resource::create([
+            'nome' => ' Produto Update',
+            'resource' => 'produto.update',
+        ]);
+
+        Resource::create([
+            'nome' => 'Produto Destroy',
+            'resource' => 'produto.destroy',
+        ]);
+        //Produto
+
+        //Contato
+        Resource::create([
+            'nome' => 'Contato Index',
+            'resource' => 'contato.index',
+        ]);
+
+        Resource::create([
+            'nome' => ' Contato Create',
+            'resource' => 'contato.create',
+        ]);
+
+        Resource::create([
+            'nome' => 'Contato Store',
+            'resource' => 'contato.store',
+        ]);
+
+        Resource::create([
+            'nome' => 'Contato Show',
+            'resource' => 'contato.show',
+        ]);
+
+        Resource::create([
+            'nome' => 'Contato Edit',
+            'resource' => 'contato.edit',
+        ]);
+
+        Resource::create([
+            'nome' => ' Contato Update',
+            'resource' => 'contato.update',
+        ]);
+
+        Resource::create([
+            'nome' => 'Contato Destroy',
+            'resource' => 'contato.destroy',
+        ]);
+        //Contato
     }
 }

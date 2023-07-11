@@ -10,4 +10,10 @@ class Unidade extends Model
     use HasFactory;
 
     protected $fillable = ['unidade', 'url'];
+
+    #Relecionamentos
+    public function produtos()
+    {
+        return $this->hasMany(Produto::class);
+    }
 }

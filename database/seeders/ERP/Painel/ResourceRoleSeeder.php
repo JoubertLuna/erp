@@ -172,5 +172,228 @@ class ResourceRoleSeeder extends Seeder
             'role_id' => '1',
             'resource_id' => '32',
         ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '33',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '34',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '35',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '36',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '37',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '38',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '39',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '40',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '41',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '42',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '43',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '44',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '45',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '1',
+            'resource_id' => '46',
+        ]);
+        //Super Administrador
+
+        //User Cadastros
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '1',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '2',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '19',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '20',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '21',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '22',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '23',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '24',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '25',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '26',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '27',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '28',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '29',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '30',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '31',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '32',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '33',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '34',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '35',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '36',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '37',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '38',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '39',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '40',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '41',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '42',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '43',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '44',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '45',
+        ]);
+
+        DB::table('resource_role')->insert([
+            'role_id' => '2',
+            'resource_id' => '46',
+        ]);
+        //User Cadastros
     }
 }
