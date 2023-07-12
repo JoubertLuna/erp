@@ -8,6 +8,7 @@ use App\Models\ERP\Painel\{
     Produto,
     Resource,
     Role,
+    TipoMovimento,
     Unidade
 };
 
@@ -17,6 +18,7 @@ use App\Observers\ERP\Painel\{
     ProdutoObserver,
     ResourceObserver,
     RoleObserver,
+    TipoMovimentoObserver,
     UnidadeObserver
 };
 
@@ -37,10 +39,16 @@ class ObserverProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        //Cadastro
         Categoria::observe(CategoriaObserver::class);
         Unidade::observe(UnidadeObserver::class);
         Produto::observe(ProdutoObserver::class);
         Contato::observe(ContatoObserver::class);
+
+        //Estoque
+        TipoMovimento::observe(TipoMovimentoObserver::class);
+
+        //Config
         Role::observe(RoleObserver::class);
         Resource::observe(ResourceObserver::class);
     }

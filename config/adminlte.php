@@ -326,6 +326,22 @@ return [
             ],
         ],
         [
+            'header' => 'Estoque',
+            //'can'    => 'estoque.geral',
+        ],
+        [
+            'text'    => 'Estoque',
+            'icon'    => 'fas fa-warehouse',
+            //'can'    => 'estoque.geral',
+            'submenu' => [
+                [
+                    'text' => 'Tipo de Movimento',
+                    'route'  => 'tipomovimento.index',
+                    'icon'    => 'fas fa-truck-loading',
+                ],
+            ],
+        ],
+        [
             'header' => 'Perfil / Permissão',
             'can'    => 'config.geral',
         ],

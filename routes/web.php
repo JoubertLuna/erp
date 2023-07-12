@@ -7,6 +7,7 @@ use App\Http\Controllers\ERP\Painel\{
     ProdutoController,
     ResourceController,
     RoleController,
+    TipoMovimentoController,
     UnidadeController
 };
 
@@ -37,6 +38,10 @@ Route::middleware('auth', 'verified', 'access.control.list')->group(function () 
     #Route Contato
     Route::resource('contato', ContatoController::class);
     #Route Contato
+
+    #Route Tipo Movimento
+    Route::resource('tipomovimento', TipoMovimentoController::class);
+    #Route Tipo Movimento
 
     #Route Role
     Route::resource('role', RoleController::class);

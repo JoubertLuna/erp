@@ -6,6 +6,7 @@ use Database\Seeders\ERP\Painel\{
     ResourceRoleSeeder,
     ResourceSeeder,
     RoleSeeder,
+    TipoMovimentoSeeder,
     UserSeeder,
 };
 
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ResourceSeeder::class,
             ResourceRoleSeeder::class,
             UserSeeder::class,
+            TipoMovimentoSeeder::class,
         ]);
     }
 }
