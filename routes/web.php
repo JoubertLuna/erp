@@ -4,6 +4,7 @@ use App\Http\Controllers\ERP\Painel\{
     CategoriaController,
     ContatoController,
     HomeController,
+    LocalizacaoController,
     ProdutoController,
     ResourceController,
     RoleController,
@@ -23,6 +24,7 @@ Route::middleware('auth', 'verified', 'access.control.list')->group(function () 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     #Route Home
 
+    //Cadastros
     #Route Categoria
     Route::resource('categoria', CategoriaController::class);
     #Route Categoria
@@ -39,10 +41,16 @@ Route::middleware('auth', 'verified', 'access.control.list')->group(function () 
     Route::resource('contato', ContatoController::class);
     #Route Contato
 
+    //Estoque
     #Route Tipo Movimento
     Route::resource('tipomovimento', TipoMovimentoController::class);
     #Route Tipo Movimento
 
+    #Route Localização
+    Route::resource('localizacao', LocalizacaoController::class);
+    #Route Localização
+
+    //Configurações
     #Route Role
     Route::resource('role', RoleController::class);
     #Route Role

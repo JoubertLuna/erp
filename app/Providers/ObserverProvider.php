@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\ERP\Painel\{
     Categoria,
     Contato,
+    Localizacao,
     Produto,
     Resource,
     Role,
@@ -15,6 +16,7 @@ use App\Models\ERP\Painel\{
 use App\Observers\ERP\Painel\{
     CategoriaObserver,
     ContatoObserver,
+    LocalizacaoObserver,
     ProdutoObserver,
     ResourceObserver,
     RoleObserver,
@@ -47,6 +49,7 @@ class ObserverProvider extends ServiceProvider
 
         //Estoque
         TipoMovimento::observe(TipoMovimentoObserver::class);
+        Localizacao::observe(LocalizacaoObserver::class);
 
         //Config
         Role::observe(RoleObserver::class);

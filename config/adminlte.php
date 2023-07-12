@@ -339,6 +339,11 @@ return [
                     'route'  => 'tipomovimento.index',
                     'icon'    => 'fas fa-truck-loading',
                 ],
+                [
+                    'text' => 'Localização',
+                    'route'  => 'localizacao.index',
+                    'icon'    => 'fas fa-boxes',
+                ],
             ],
         ],
         [
