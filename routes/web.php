@@ -6,6 +6,7 @@ use App\Http\Controllers\ERP\Painel\{
     HomeController,
     LocalizacaoController,
     ProdutoController,
+    ProdutoLocalizacaoController,
     ResourceController,
     RoleController,
     TipoMovimentoController,
@@ -49,6 +50,10 @@ Route::middleware('auth', 'verified', 'access.control.list')->group(function () 
     #Route Localização
     Route::resource('localizacao', LocalizacaoController::class);
     #Route Localização
+
+    #Route Produto Localizacao
+    Route::resource('produtolocalizacao', ProdutoLocalizacaoController::class);
+    #Route Produto Localizacao
 
     //Configurações
     #Route Role

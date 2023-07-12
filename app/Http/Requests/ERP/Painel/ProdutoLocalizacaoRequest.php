@@ -11,7 +11,7 @@ class ProdutoLocalizacaoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class ProdutoLocalizacaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'produto_id' => 'required|exists:produtos,id',
+            'localizacao_id' => 'required|exists:localizacaos,id',
         ];
     }
 }

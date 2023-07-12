@@ -344,6 +344,11 @@ return [
                     'route'  => 'localizacao.index',
                     'icon'    => 'fas fa-boxes',
                 ],
+                [
+                    'text' => 'Localização do Produto',
+                    'route'  => 'produtolocalizacao.index',
+                    'icon'    => 'fas fa-search-location',
+                ],
             ],
         ],
         [

@@ -3,63 +3,116 @@
 namespace App\Http\Controllers\ERP\Painel;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\ERP\Painel\ProdutoLocalizacaoRequest;
+use App\Models\ERP\Painel\{
+    Localizacao,
+    Produto,
+    ProdutoLocalizacao,
+};
 
 class ProdutoLocalizacaoController extends Controller
 {
+    private $produtoLocalizacao, $produto, $localizacao;
+
+    public function __construct(ProdutoLocalizacao  $produtoLocalizacao, Produto $produto, Localizacao $localizacao)
+    {
+        $this->produtoLocalizacao = $produtoLocalizacao;
+        $this->produto = $produto;
+        $this->localizacao = $localizacao;
+    }
+
     /**
-     * Display a listing of the resource.
+     * Index
      */
     public function index()
     {
-        //
+        $produtoLocalizacaos = $this->produtoLocalizacao->lista();
+        $produtos = $this->produto->all('id', 'produto');
+        $localizacaos = $this->localizacao->all('id', 'localizacao');
+        return view('erp.painel.pages.produto_localizacao.index', compact('produtoLocalizacaos', 'localizacaos', 'produtos'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * create
      */
     public function create()
     {
-        //
+        $produtos = $this->produto->all('id', 'produto');
+        $localizacaos = $this->localizacao->all('id', 'localizacao');
+        return view('erp.painel.pages.produto_localizacao.create', compact('localizacaos', 'produtos'));
     }
 
     /**
-     * Store a newly created resource in storage.
+     * store
      */
-    public function store(Request $request)
+    public function store(ProdutoLocalizacaoRequest $request)
     {
-        //
+        $data = $request->except('_token');
+        $valid = ProdutoLocalizacao::where('produto_id', $data['produto_id'])->where('localizacao_id', $data['localizacao_id'])->first();
+
+        if (!$valid) {
+            $this->produtoLocalizacao->create($data);
+            return redirect()->route('produtolocalizacao.index')->with('success', 'Localização do produto cadastrada com sucesso');
+        } else {
+            return redirect()->route('produtolocalizacao.create')->with('error', 'Localização ocupada');
+        }
     }
 
     /**
-     * Display the specified resource.
+     * show
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        if (!$produtoLocalizacao = $this->produtoLocalizacao->where('id', $id)->first()) {
+            return redirect()->back();
+        }
+        $produtos = $this->produto->all('id', 'produto');
+        $localizacaos = $this->localizacao->all('id', 'localizacao');
+        return view('erp.painel.pages.produto_localizacao.show', compact('produtoLocalizacao', 'produtos', 'localizacaos'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * edit
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        if (!$produtoLocalizacao = $this->produtoLocalizacao->where('id', $id)->first()) {
+            return redirect()->back();
+        }
+        $produtos = $this->produto->all('id', 'produto');
+        $localizacaos = $this->localizacao->all('id', 'localizacao');
+        return view('erp.painel.pages.produto_localizacao.edit', compact('produtoLocalizacao', 'localizacaos', 'produtos'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * update
      */
-    public function update(Request $request, string $id)
+    public function update(ProdutoLocalizacaoRequest $request, $id)
     {
-        //
+        if (!$produtoLocalizacao = $this->produtoLocalizacao->where('id', $id)->first()) {
+            return redirect()->back();
+        }
+
+        if ($produtoLocalizacao->update($request->except('_token', '_method'))) {
+            return redirect()->route('produtolocalizacao.index')->with('success', 'Localização do produto editada com sucesso');
+        } else {
+            return redirect()->route('produtolocalizacao.index')->with('error', 'Falha ao editar a localização do produto');
+        }
     }
 
     /**
-     * Remove the specified resource from storage.
+     * excluir
      */
     public function destroy(string $id)
     {
-        //
+        if (!$produtoLocalizacao = $this->produtoLocalizacao->where('id', $id)->first()) {
+            return redirect()->back();
+        }
+
+        if ($produtoLocalizacao->delete()) {
+            return redirect()->route('produtolocalizacao.index')->with('danger', 'Localização do produto excluída com sucesso!');
+        } else {
+            return redirect()->route('produtolocalizacao.index')->with('error', 'Falha ao excluir a localização do produto');
+        }
     }
 }
